@@ -1,0 +1,17 @@
+version: '3'
+services:
+  terrillo:
+    container_name: terrillo
+    build:
+      context: .
+    ports:
+    - target: 8080
+      published: 80
+      protocol: tcp
+      mode: host
+    volumes:
+      - ./app:/app
+    environment:
+      - UWSGI_WORKERS=4
+    sysctls:
+      net.core.somaxconn: 1024

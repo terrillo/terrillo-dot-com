@@ -1,0 +1,8 @@
+title: Upgrade your Python code by using Constants
+description: Python Constants are typically used to store values that are used frequently in a program, such as mathematical constants or other values that are used throughout the code.
+image: 
+  src: python-constants.png
+  width: 1000
+  height: 562.5
+published: December 20, 2022
+topic: python

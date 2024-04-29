@@ -1,0 +1,52 @@
+{% extends "_layout.html" %} {% block content %}
+
+<!-- Header -->
+<header class="mt4">
+  <img class="uk-border-circle center tc db mb3 uk-box-shadow-large" src="/static/images/terrillo-walls.JPG" width="120"
+    height="120" alt="Terrillo Walls">
+  <h1 class="tc f1 mb1 cursive">Terrillo Walls</h1>
+  <h2 class="tc f4 mb1 b serif">CEO @ Khabin Technology</h2>
+</header>
+
+<main class="pv5">
+  <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+
+    <!-- LEFT -->
+    <div>
+      <p class="b">About Terrillo Walls</p>
+      <p class="f6 serif">Born in New Orleans, LA. Terrillo is an Award-Winning Technology Leader.</p>
+      <p class="f6 serif">Directed technology teams as a consultant and worked for Marketing Agency, Technology, and
+        Media company from 2012 to 2022.</p>
+      <p class="f6 serif">Founded <a href="https://khabin.tech">Khabin Technology</a> in 2020. Software Technology
+        Consulting and Development</p>
+      <p class="b">Mission Statement</p>
+      <p class="f6 serif">Enabling organizations and business owners to utilize & build software technology in a
+        maintainable and scalable manner.</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div>
+      <p class="b">2019 BIMS Emerging Leader Winner</p>
+      <p class="f6 serif">Each year, member companies nominate their "rising stars" aged 35 and under (at the time of
+        nomination.) Finalists are selected by a panel of SIIA executives – with only five winners selected by a panel
+        of elite business executives.</p>
+      <p class="b">Self Taught Software Software Engineer</p>
+      <p class="f6 serif">Over 10 years of experience working with HTML, CSS, JS, PHP, & LINUX servers. Other
+        experiences included AWS, Swift, Java, Python, Golang, Objective-C, & Natural Language processing.</p>
+    </div>
+
+  </div>
+
+  <!-- NOW PLAYING -->
+  {% if PLAYING %}
+  <a href="{{ PLAYING.url }}" target="_blank" class="flex items-center justify-center pa3 bg-lightest-blue navy mt3">
+    <ion-icon name="musical-notes"></ion-icon>
+    <span class=" mh3"><span class="lh-title b mr1">{{ PLAYING.track }}</span> <span class="f7">{{ PLAYING.artist
+        }}</span> </span>
+    <ion-icon name="musical-notes"></ion-icon>
+  </a>
+  {% endif %}
+
+</main>
+
+{% endblock %}

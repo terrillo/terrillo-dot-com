@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Terrillo Walls</title>
+	<atom:link href="https://terrillo.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://terrillo.com</link>
+	<description>Software Consultant and Software Engineer</description>
+	<lastBuildDate>{{ POSTS[0].date }}</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+
+		{% for post in POSTS %}
+		<item>
+			<title>{{ post.title }}</title>
+			<link>https://terrillo.com/article/{{ post.slug }}</link>
+			<comments>https://terrillo.com/article/{{ post.slug }}</comments>
+			<dc:creator><![CDATA[Terrillo Walls]]></dc:creator>
+			<pubDate>{{ post.date }}</pubDate>
+			<category><![CDATA[{{ post.topic }}]]></category>
+			<guid isPermaLink="false">https://terrillo.com/article/{{ post.slug }}</guid>
+			<description><![CDATA[<img src="https://terrillo.com/static/blog/{{ post.image.src|safe }}" height="{{ post.image.height }}px" width="{{ post.image.width }}px"/> {{ post.html|safe }}]]></description>
+		</item>
+		{% endfor %}
+
+	</channel>
+</rss>

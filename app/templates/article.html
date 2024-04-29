@@ -1,0 +1,11 @@
+{% extends "_layout.html" %} {% block content %}
+
+<article class="serif layout--article mb4 db" itemscope itemtype="https://schema.org/Article">
+  <h1 itemprop="name" class="f1 mv3 tc b serif">{{ SEO.title }}</h1>
+  <p itemprop="datePublished" class="f6 mv3 tc b serif">{{ SEO.published }}</p>
+  {{ post.html|safe }}
+</article>
+
+{% include 'blocks/about.html' %}
+
+{% endblock %}
