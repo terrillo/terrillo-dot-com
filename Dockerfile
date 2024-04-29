@@ -13,7 +13,11 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 # Ngnix 
 COPY ./server/nginx.conf /etc/nginx/conf.d/nginx.conf
 
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+
 # Start Server
 CMD ["/start.sh"]
+
 
 EXPOSE 8080
