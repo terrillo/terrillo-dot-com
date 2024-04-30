@@ -1,22 +1,10 @@
-FROM khabinllc/flask:stashverse2
+FROM python:3.9
+WORKDIR /code
 
-# Place your flask application on the server
-COPY ./app /app
-WORKDIR /app
+COPY ./requirements.txt /code/requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-# Ubuntu Dependencies 
-RUN apt-get install libjpeg-dev zlib1g-dev
+COPY ./app /code/app
+COPY ./static /static
 
-# Install requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt
-
-# Ngnix 
-COPY ./server/nginx.conf /etc/nginx/conf.d/nginx.conf
-
-RUN unlink /tmp/supervisor.sock
-
-# Start Server
-CMD ["/start.sh"]
-
-
-EXPOSE 8080
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--reload"]
