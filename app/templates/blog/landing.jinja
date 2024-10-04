@@ -1,0 +1,23 @@
+{% extends "_layout.jinja" %} {% block content %}
+
+<section class="mw7 center pv5">
+    {% for post in posts %}
+    <article class="pv4 ph3 ph0-l">
+        <div class="flex flex-column flex-row-ns">
+            <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
+                <a href="/blog/{{ post.slug}}/">
+                    <h1 class="f3 fw7 mt0 mb2 lh-title">{{ post.title }}</h1>
+                </a>
+                <p class="f4 athelas">{{ post.description }}
+                </p>
+            </div>
+        </div>
+        <div class="f6 font-semibold leading-7 text-yellow-600 uppercase mb-2 o-50">
+            <span>{{ post.topic }}</span>
+            <span itemprop="datePublished">({{ post.published }})</span>
+        </div>
+    </article>
+    {% endfor %}
+</section>
+
+{% endblock %}

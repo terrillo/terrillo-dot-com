@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{{ SEO.title }} - Terrillo Walls</title>
+    <meta name="description" content="{{ SEO.description }}" />
+    <link rel="canonical" href="https://terrillo.com{{ request.path }}" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=5.1" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@terrillo" />
+    <meta name="twitter:creator" content="@terrillo" />
+    <meta name="twitter:url" content="https://terrillo.com/" />
+    <meta name="twitter:title" content="{{ SEO.title }}" />
+    <meta name="twitter:description" content="{{ SEO.description }}" />
+
+    {% if SEO.image %}
+    <meta name="twitter:image" content="https://terrillo.com/static/images/{{ SEO.image }}" />
+    {% endif %}
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ SEO.title }}" />
+    <meta property="og:description" content="{{ SEO.description }}" />
+    <meta property="og:site_name" content="Terrillo Walls" />
+    <meta property="og:url" content="https://terrillo.com{{ request.path }}" />
+
+    {% if SEO.image %}
+    <meta name="og:image" content="https://terrillo.com/static/images/{{ SEO.image }}" />
+    <meta property="og:image:height" content="900" />
+    <meta property="og:image:width" content="900" />
+    {% endif %}
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="google-site-verification" content="G-yiVnfI0O-hVDGBz7RIJP5GX5vglrWfo0BWklZqCXA" />
+    <meta property="author" content="Terrillo Walls" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/vendor/tachyons.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/site.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Roboto+Mono:wght@300&family=Roboto+Serif:opsz,wght@8..144,400;8..144,700&family=Roboto:ital,wght@0,400;0,700;1,100&display=swap"
+        rel="stylesheet" />
+
+    <!-- UIkit JS -->
+    <script src="/static/vendor/uikit.min.js"></script>
+
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Terrillo Walls",
+        "givenName": "Terrillo Walls",
+        "disambiguatingDescription": "Software Consultant & Software Engineer",
+        "image": "https://terrillo.com/static/images/terrillo-walls.JPG",
+        "email": "terrillo@terrilo.com",
+        "url": "https://terrillo.com"
+      }
+    </script>
+
+
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="EOHZTGQS" defer></script>
+    <!-- / Fathom -->
+
+</head>
+
+<body>
+
+    <div class="uk-container mw7">
+
+        <nav class="uk-navbar-container uk-navbar-transparent sans-serif flex-column flex-row-ns" uk-navbar>
+            <div class="uk-navbar-left dn db-ns">
+                <a class="uk-navbar-item uk-logo b black" href="/">Terrillo Walls</a>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="https://khabin.tech">Hire / Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="uk-container mw7 my4">
+            {% block content %} {% endblock %}
+        </div>
+
+        <footer class="pb4 mid-gray">
+            <div class="tc">
+                <a rel="me" href="https://mastodon.social/@mrterrillo" class="f6 dib ph2 link mid-gray dim">Mastodon</a>
+                <a href="https://github.com/terrillo" class="f6 dib ph2 link mid-gray dim">GitHub</a>
+                <a href="https://instagram.com/mrterrillo" class="f6 dib ph2 link mid-gray dim">Instagram</a>
+                <a href="https://www.youtube.com/channel/UC3uyZ4xqUCGbMP6IVfPQ7Ng"
+                    class="f6 dib ph2 link mid-gray dim">YouTube</a>
+                <a href="https://www.linkedin.com/in/terrillo-walls" class="f6 dib ph2 link mid-gray dim">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Ion Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="/static/vendor/ionicons.js"></script>
+
+
+</body>
+
+</html>

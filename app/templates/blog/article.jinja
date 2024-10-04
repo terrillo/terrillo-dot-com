@@ -1,0 +1,29 @@
+{% extends "_layout.jinja" %} {% block content %}
+
+<article class="pt-6 pb-12 lg:px-8 custom-html custom-markdown pv5" itemscope itemtype="https://schema.org/Article">
+    <div class="mx-auto max-w-4xl px-6 text-base leading-7 text-stone-700">
+        <div class="f6 font-semibold leading-7 text-yellow-600 uppercase mb-2 o-50">
+            <span>{{ post.topic }}</span>
+            <span itemprop="datePublished">({{ post.published }})</span>
+        </div>
+        <h1 itemprop="name" class="mb-3 fw9 f1 block mt-0 tracking-tight pv2">{{ post.title }}
+        </h1>
+        <div articleBody itemprop="articleBody" class="mt-4 athelas">
+            <div>
+                {% if post.image %}
+                <img src="/static/images/blog/{{ post.image }}" alt="{{ post.title }}"
+                    class="rounded-md shadow-xl my-8" />
+                {% endif %}
+            </div>
+            <div class="space-y-3">{{ post.html | safe}}</div>
+        </div>
+    </div>
+</article>
+
+<script src="/static/js/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('article a').addClass('text-yellow-600')
+    })
+</script>
+{% endblock %}

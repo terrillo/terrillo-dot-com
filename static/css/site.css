@@ -31,7 +31,7 @@ pre {
   font-family: "Roboto Mono", monospace;
   font-size: 14px;
   letter-spacing: 1.1px;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   padding: 10px;
   color: #000;
 }
@@ -75,20 +75,56 @@ p {
 .layout--article a {
   color: purple;
 }
-.layout--article p, .layout--article ul, .layout--article li, .layout--article ol {
+
+.layout--article p,
+.layout--article ul,
+.layout--article li,
+.layout--article ol {
   line-height: 1.7;
 }
-:not(pre) > code,
-:not(pre) > kbd,
-:not(pre) > samp {
+
+:not(pre)>code,
+:not(pre)>kbd,
+:not(pre)>samp {
   color: purple;
 }
 
 .gradient {
   background: linear-gradient(0, #a33ea3, purple);
 }
+
 .layout--article blockquote {
   border-left: 4px solid purple;
   padding-left: 6px;
   font-size: 80%;
+}
+
+
+.box h2 {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.profile-image {
+  border-radius: 10px;
+  border-bottom-left-radius: 110px;
+}
+
+[articleBody] p {
+  line-height: 1.7;
+}
+
+article ul {
+  list-style: square;
+  margin-left: 15px;
+}
+
+article ol li {
+  margin-bottom: 10px;
+}
+
+article ol,
+article ol ul {
+  list-style: lower-roman;
+  margin-left: 15px;
 }
