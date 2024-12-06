@@ -12,7 +12,7 @@
             <div>
                 {% if post.image %}
                 <img src="/static/images/blog/{{ post.image }}" alt="{{ post.title }}"
-                    class="rounded-md shadow-xl my-8" />
+                    class="shadow-1 mv3" />
                 {% endif %}
             </div>
             <div class="space-y-3">{{ post.html | safe}}</div>
