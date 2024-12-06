@@ -8,7 +8,7 @@
         </div>
         <h1 itemprop="name" class="mb-3 fw9 f1 block mt-0 tracking-tight pv2">{{ post.title }}
         </h1>
-        <div articleBody itemprop="articleBody" class="mt-4 athelas">
+        <div articleBody itemprop="articleBody" class="mt-4 athelas f4">
             <div>
                 {% if post.image %}
                 <img src="/static/images/blog/{{ post.image }}" alt="{{ post.title }}"
@@ -19,11 +19,4 @@
         </div>
     </div>
 </article>
-
-<script src="/static/js/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('article a').addClass('text-yellow-600')
-    })
-</script>
 {% endblock %}

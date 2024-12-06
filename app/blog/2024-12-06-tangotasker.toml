@@ -1,0 +1,31 @@
+title = "TangoTasker - Productivity App"
+description = "I’m very pleased to announce TangoTasker, a brand new app for productivity."
+topic = "Projects"
+published = "December 6, 2024"
+
+markdown = """
+
+I’m very pleased to announce [TangoTasker](https://tangotasker.com), a brand-new app for productivity.
+
+> **TangoTasker**, the newest productivity tool designed for busy professionals, students, entrepreneurs, and anyone looking to streamline their tasks and projects, is now available across Apple platforms. With a powerful set of features that help users regain control over their time, TangoTasker aims to solve the modern-day challenge of task overload and disorganization.
+
+TangoTasker offers a structured, intuitive system for managing tasks, lists, and projects, making it easy to stay on top of commitments, prioritize effectively, and reduce stress. Unlike many task management apps, TangoTasker focuses on giving users flexible workflows, allowing them to choose how they move tasks from "TODO" to "DONE" and beyond.
+
+---
+
+This app has been in development for about a year, and I’m thrilled to finally share it with the world. I believe TangoTasker will help people reclaim their time and focus on what matters most to them. It started as a macOS app but has since expanded to iOS and iPadOS, with plans for an Android version later next year.
+
+It's crafted to meet users where they are, with both basic and advanced task management features. For users who need a simple system, TangoTasker provides straightforward list management. For power users, the app offers customizable status flows, subtasks, and multiple viewing options for complete control over complex projects.
+
+I've tried just about every productivity app on the App Store: Things 2, OmniFocus, Todoist, Microsoft To Do, Jira, and even the built-in Reminders app. But none of them quite fit my workflow. I tend to add just about everything to a to-do app, and I often find myself needing more control over the current status of a task. For instance, I like marking a task as "In Progress."
+
+The other big reason for creating TangoTasker was my desire for a great macOS experience. I’ve learned that Mac apps aren’t very popular, and that might explain why many don’t prioritize the platform.
+
+TangoTasker launched in early November, and I’m very happy with the traction so far. A lot of major development has been done in the meantime. Version [1.2.0v](https://tangotasker.com/article/20241119-1-1-2/) added tags and search functionality. I currently have plans for larger features like "Milestones" which offer another layer of organization by grouping tasks from different lists around a larger goal or objective.
+
+There’s a whole "TangoTasker Method" I’ve created—more on that later.
+
+If you haven’t already, you can [download TangoTasker on the App Store.](https://apps.apple.com/us/app/tangotasker/id6670802509)
+
+
+"""

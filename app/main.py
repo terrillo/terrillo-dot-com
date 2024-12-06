@@ -68,7 +68,9 @@ def blog(request: Request):
 @app.get("/blog/{slug}/")
 def article(request: Request, slug):
     try:
-        POST_OBJECT = toml.loads(open(f"/code/app/blog/{slug}.toml", "r").read())
+        POST_OBJECT = toml.loads(
+            open(f"/code/app/blog/{slug}.toml", "r").read()
+        )
     except:
         raise HTTPException(status_code=404)
 
@@ -99,6 +101,7 @@ def sitemap(request: Request):
     SITES = []
     STATIC = [
         ("/", "home.jinja", "1.0"),
+        ("/blog/", "blog/landing.jinja", "0.9"),
     ]
 
     for page in STATIC:
@@ -123,7 +126,7 @@ def sitemap(request: Request):
                 {
                     "path": "/blog/" + post.replace(".toml", "") + "/",
                     "lastmod": DATE,
-                    "priority": "0.7",
+                    "priority": "0.8",
                 }
             )
 

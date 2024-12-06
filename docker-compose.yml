@@ -1,14 +1,13 @@
-version: "3"
 services:
-  terrillo:
-    container_name: terrillo
-    build: ./
-    restart: no
-    ports:
-    - target: 80
-      published: 80
-      protocol: tcp
-      mode: host
-    volumes:
-      - ./app:/code/app
-      - ./static:/static
+    terrillo:
+        container_name: terrillo
+        build: ./
+        restart: no
+        ports:
+            - target: 80
+              published: 80
+              protocol: tcp
+              mode: host
+        volumes:
+            - ./app:/code/app
+            - ./static:/static
