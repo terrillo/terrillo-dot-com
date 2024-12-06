@@ -79,7 +79,7 @@ def article(request: Request, slug):
 
     IMAGE = None
     if "image" in POST_OBJECT:
-        IMAGE = "/static/images/blog/" + POST_OBJECT["image"]
+        IMAGE = "static/images/blog/" + POST_OBJECT["image"]
 
     return templates.TemplateResponse(
         "blog/article.jinja",
